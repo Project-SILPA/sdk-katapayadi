@@ -14,6 +14,9 @@ import java.util.Map;
  */
 public class Katapayadi {
 
+    /**
+     * private map for language bases
+     */
     private static final Map<Integer, Integer> languageBases = new HashMap<Integer, Integer>();
 
     static {
@@ -34,7 +37,12 @@ public class Katapayadi {
 
     private static final String LOG_TAG = Katapayadi.KATAPAYADI_MODULE_NAME;
 
-
+    /**
+     * This function is used to get katapayadi number
+     *
+     * @param word text
+     * @return number in string format
+     */
     public String getNumber(String word) {
         word = word.trim();
         Syllabifier syllabifier = new Syllabifier();
@@ -54,6 +62,13 @@ public class Katapayadi {
         return number;
     }
 
+    /**
+     * This function is used to get number for a syllable
+     *
+     * @param syllable syllable
+     * @param base     language base - unicode
+     * @return number as a string
+     */
     private String getNumberForSyllable(String syllable, int base) {
         List<Integer> katapayadi = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6,
                 7, 8, 9, 0, 0, 1, 2, 3, 4, 5, 1, 2, 0, 3, 9, 0, 4, 5, 6, 7, 8);
@@ -76,6 +91,12 @@ public class Katapayadi {
         return "0";
     }
 
+    /**
+     * This function is used to get swarasthanas
+     *
+     * @param raga number
+     * @return List of swarasthanas
+     */
     public List<String> getSwarasthanas(String raga) {
         List<String> swarasthans = new ArrayList<String>();
         swarasthans.add("Sa");
@@ -153,11 +174,20 @@ public class Katapayadi {
         return swarasthans;
     }
 
-
+    /**
+     * This function gives name of the module
+     *
+     * @return name of module
+     */
     public String getModuleName() {
         return Katapayadi.KATAPAYADI_MODULE_NAME;
     }
 
+    /**
+     * This function gives a brief description of the module
+     *
+     * @return brief information regarding the module
+     */
     public String getModuleInformation() {
         return Katapayadi.KATAPAYADI_MODULE_INFORMATION;
     }
