@@ -3,7 +3,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import org.smc.silpamodules.katapayadi.Katapayadi;
+import org.silpa.katapayadi.Katapayadi;
 
 import java.util.List;
 
@@ -62,7 +62,7 @@ public class TestKatapayadi extends AndroidTestCase {
     public void testGetModuleName() {
         Katapayadi obj = new Katapayadi();
         assertNotNull(obj);
-        assertEquals(Katapayadi.KATAPAYADI_MODULE_NAME, obj.getModuleName());
+        assertEquals(Katapayadi.MODULE_NAME, obj.getModuleName());
     }
 
     @SmallTest
@@ -71,7 +71,7 @@ public class TestKatapayadi extends AndroidTestCase {
     public void testGetModuleInformation() {
         Katapayadi obj = new Katapayadi();
         assertNotNull(obj);
-        assertEquals(Katapayadi.KATAPAYADI_MODULE_INFORMATION, obj.getModuleInformation());
+        assertEquals(Katapayadi.MODULE_INFORMATION, obj.getModuleInformation());
     }
 
     @Override

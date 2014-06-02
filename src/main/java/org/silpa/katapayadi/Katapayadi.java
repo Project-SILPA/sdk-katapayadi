@@ -1,7 +1,7 @@
-package org.smc.silpamodules.katapayadi;
+package org.silpa.katapayadi;
 
-import org.smc.silpamodules.syllabifier.LanguageDetect;
-import org.smc.silpamodules.syllabifier.Syllabifier;
+import org.silpa.syllabifier.LanguageDetect;
+import org.silpa.syllabifier.Syllabifier;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,11 +31,11 @@ public class Katapayadi {
         languageBases.put(LanguageDetect.MALAYALAM, 0x0D15);
     }
 
-    public static final String KATAPAYADI_MODULE_NAME = "Katapayadi";
-    public static final String KATAPAYADI_MODULE_INFORMATION = "Decodes the numbers from the " +
+    public static final String MODULE_NAME = "Katapayadi";
+    public static final String MODULE_INFORMATION = "Decodes the numbers from the " +
             "katapayadi numbering system";
 
-    private static final String LOG_TAG = Katapayadi.KATAPAYADI_MODULE_NAME;
+    private static final String LOG_TAG = Katapayadi.MODULE_NAME;
 
     /**
      * This function is used to get katapayadi number
@@ -180,7 +180,7 @@ public class Katapayadi {
      * @return name of module
      */
     public String getModuleName() {
-        return Katapayadi.KATAPAYADI_MODULE_NAME;
+        return Katapayadi.MODULE_NAME;
     }
 
     /**
@@ -189,7 +189,7 @@ public class Katapayadi {
      * @return brief information regarding the module
      */
     public String getModuleInformation() {
-        return Katapayadi.KATAPAYADI_MODULE_INFORMATION;
+        return Katapayadi.MODULE_INFORMATION;
     }
 
 }
