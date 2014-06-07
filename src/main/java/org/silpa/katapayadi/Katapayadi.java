@@ -1,6 +1,6 @@
 package org.silpa.katapayadi;
 
-import org.silpa.syllabifier.LanguageDetect;
+import org.silpa.sdk.common.LanguageDetect;
 import org.silpa.syllabifier.Syllabifier;
 
 import java.util.ArrayList;
@@ -17,18 +17,18 @@ public class Katapayadi {
     /**
      * private map for language bases
      */
-    private static final Map<Integer, Integer> languageBases = new HashMap<Integer, Integer>();
+    private static final Map<String, Integer> languageBases = new HashMap<String, Integer>();
 
     static {
-        languageBases.put(LanguageDetect.HINDI, 0x0915);
-        languageBases.put(LanguageDetect.BENGALI, 0x0995);
-        languageBases.put(LanguageDetect.PUNJABI, 0x0A15);
-        languageBases.put(LanguageDetect.GUJARATI, 0x0A95);
-        languageBases.put(LanguageDetect.ORIYA, 0x0B15);
-        languageBases.put(LanguageDetect.TAMIL, 0x0B95);
-        languageBases.put(LanguageDetect.TELUGU, 0x0C15);
-        languageBases.put(LanguageDetect.KANNADA, 0x0C95);
-        languageBases.put(LanguageDetect.MALAYALAM, 0x0D15);
+        languageBases.put("hi_IN", 0x0915);
+        languageBases.put("bn_IN", 0x0995);
+        languageBases.put("pa_IN", 0x0A15);
+        languageBases.put("gu_IN", 0x0A95);
+        languageBases.put("or_IN", 0x0B15);
+        languageBases.put("ta_IN", 0x0B95);
+        languageBases.put("te_IN", 0x0C15);
+        languageBases.put("ka_IN", 0x0C95);
+        languageBases.put("ml_IN", 0x0D15);
     }
 
     public static final String MODULE_NAME = "Katapayadi";
@@ -51,7 +51,7 @@ public class Katapayadi {
         int base;
 
         try {
-            int srcLangCode = LanguageDetect.detectLanguage(word).get(word);
+            String srcLangCode = LanguageDetect.detectLanguage(word).get(word);
             base = languageBases.get(srcLangCode);
         } catch (Exception e) {
             return "Unsupported Language";
