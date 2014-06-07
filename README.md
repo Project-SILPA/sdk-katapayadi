@@ -1,7 +1,7 @@
 Katapayadi
 ==========
 
-Travis master: [![Build Status](https://travis-ci.org/SujithVadakkepat/sdk-katapayadi.svg?branch=master)](https://travis-ci.org/SujithVadakkepat/sdk-katapayadi)
+Travis master: [![Build Status](https://travis-ci.org/Project-SILPA/sdk-katapayadi.svg?branch=master)](https://travis-ci.org/Project-SILPA/sdk-katapayadi)
 
 SILPA - Katapayadi
 Katapayadi sankhya is a simplification of Aryabhata 's Sanskrit numerals , due probably to Haridatta from Kerala.
