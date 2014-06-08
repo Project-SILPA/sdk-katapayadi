@@ -108,34 +108,36 @@ public class Katapayadi {
         } catch (Exception e) {
             number = Long.parseLong(getNumber(raga));
         }
-        long melakarthaNumber = number % 100;
-        long quotient = (melakarthaNumber - 1) / 6;
-        long remainder = (melakarthaNumber - 1) % 6;
+        int melakarthaNumber = (int) (number % 100);
+        int quotient = (melakarthaNumber - 1) / 6;
+        int remainder = (melakarthaNumber - 1) % 6;
         quotient = quotient % 6;
 
-        if (quotient == 0) {
-            swarasthans.add("Ri1");
-            swarasthans.add("Ga1");
-        }
-        if (quotient == 1) {
-            swarasthans.add("Ri1");
-            swarasthans.add("Ga2");
-        }
-        if (quotient == 2) {
-            swarasthans.add("Ri1");
-            swarasthans.add("Ga3");
-        }
-        if (quotient == 3) {
-            swarasthans.add("Ri2");
-            swarasthans.add("Ga2");
-        }
-        if (quotient == 4) {
-            swarasthans.add("Ri2");
-            swarasthans.add("Ga3");
-        }
-        if (quotient == 5) {
-            swarasthans.add("Ri3");
-            swarasthans.add("Ga3");
+        switch (quotient) {
+            case 0:
+                swarasthans.add("Ri1");
+                swarasthans.add("Ga1");
+                break;
+            case 1:
+                swarasthans.add("Ri1");
+                swarasthans.add("Ga2");
+                break;
+            case 2:
+                swarasthans.add("Ri1");
+                swarasthans.add("Ga3");
+                break;
+            case 3:
+                swarasthans.add("Ri2");
+                swarasthans.add("Ga2");
+                break;
+            case 4:
+                swarasthans.add("Ri2");
+                swarasthans.add("Ga3");
+                break;
+            case 5:
+                swarasthans.add("Ri3");
+                swarasthans.add("Ga3");
+                break;
         }
 
         if (melakarthaNumber <= 36) {
@@ -146,30 +148,33 @@ public class Katapayadi {
         }
         swarasthans.add("Pa");
 
-        if (remainder == 0) {
-            swarasthans.add("Da1");
-            swarasthans.add("Ni1");
+        switch (remainder) {
+            case 0:
+                swarasthans.add("Da1");
+                swarasthans.add("Ni1");
+                break;
+            case 1:
+                swarasthans.add("Da1");
+                swarasthans.add("Ni2");
+                break;
+            case 2:
+                swarasthans.add("Da1");
+                swarasthans.add("Ni3");
+                break;
+            case 3:
+                swarasthans.add("Da2");
+                swarasthans.add("Ni2");
+                break;
+            case 4:
+                swarasthans.add("Da2");
+                swarasthans.add("Ni3");
+                break;
+            case 5:
+                swarasthans.add("Da3");
+                swarasthans.add("Ni3");
+                break;
         }
-        if (remainder == 1) {
-            swarasthans.add("Da1");
-            swarasthans.add("Ni2");
-        }
-        if (remainder == 2) {
-            swarasthans.add("Da1");
-            swarasthans.add("Ni3");
-        }
-        if (remainder == 3) {
-            swarasthans.add("Da2");
-            swarasthans.add("Ni2");
-        }
-        if (remainder == 4) {
-            swarasthans.add("Da2");
-            swarasthans.add("Ni3");
-        }
-        if (remainder == 5) {
-            swarasthans.add("Da3");
-            swarasthans.add("Ni3");
-        }
+
         swarasthans.add("Sa");
         return swarasthans;
     }
