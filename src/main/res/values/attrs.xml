@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Attributes for KatapayadiEditText -->
+    <declare-styleable name="KatapayadiEditText">
+        <attr name="katapayadiOutputTo" format="reference" />
+    </declare-styleable>
+
+</resources>
