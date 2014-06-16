@@ -43,7 +43,7 @@ public class Katapayadi {
      * @param word text
      * @return number in string format
      */
-    public String getNumber(String word) {
+    public String getKatapayadiNumber(String word) {
         word = word.trim();
         Syllabifier syllabifier = new Syllabifier();
         List<String> syllables = syllabifier.getSyllables(word);
@@ -106,7 +106,7 @@ public class Katapayadi {
         try {
             number = Long.parseLong(raga);
         } catch (Exception e) {
-            number = Long.parseLong(getNumber(raga));
+            number = Long.parseLong(getKatapayadiNumber(raga));
         }
         int melakarthaNumber = (int) (number % 100);
         int quotient = (melakarthaNumber - 1) / 6;

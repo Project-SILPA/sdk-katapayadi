@@ -31,7 +31,7 @@ public class TestKatapayadi extends AndroidTestCase {
     public void testGetNumber() {
         Katapayadi obj = new Katapayadi();
         assertNotNull(obj);
-        assertEquals("31415926536", obj.getNumber("ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല"));
+        assertEquals("31415926536", obj.getKatapayadiNumber("ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല"));
     }
 
     @SmallTest
