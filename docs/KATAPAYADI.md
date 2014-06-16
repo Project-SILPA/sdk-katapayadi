@@ -9,15 +9,15 @@ to the dependencies.
 
 #### Get Katapayadi Number
 ```
-Katapayadi obj = new Katapayadi();
-String num = obj.getNumber("ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല");
+        Katapayadi obj = new Katapayadi();
+        String num = obj.getNumber("ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല");
 ```
 The above function `obj.getNumber();` returns Katapayadi number in `String` format.
 
 #### Get Swarasthanas
 ```
-Katapayadi obj = new Katapayadi();
-List<String> swarasthans = obj.getSwarasthanas("1");
+        Katapayadi obj = new Katapayadi();
+        List<String> swarasthans = obj.getSwarasthanas("1");
 ```
 The above function `obj.getSwarasthanas(String);` returns list of Swarasthanas. For eg: `"[Sa, Ri1, Ga1, Ma1, Pa, Da1, Ni1, Sa]"`
 
@@ -100,9 +100,49 @@ Argument can be number or raga in `String` format.
 
 #### Get module name and information
 ```
-String moduleName = obj.getModuleName();
-String moduleInforamtion =  obj.getModuleInformation();
+        String moduleName = obj.getModuleName();
+        String moduleInforamtion =  obj.getModuleInformation();
 ```
+
+#### KatapayadiEditText
+
+```
+
+        <org.silpa.katapayadi.KatapayadiEditText
+                android:id="@+id/edtKatapayadi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                katapayadi:katapayadiOutputTo="@+id/tvKatapayadiOutput" />
+
+```
+
+Here `katapayadi:katapayadiOutputTo="@+id/fieldId" ` would output katapayadi number of the text in edit text automatically to another Edittext or TextView specified by 'fieldId'
+
+Katapayadi number can also be obtained by :
+
+```
+    String num = edtKatapayadi.getKatapayadiNumber();
+```
+
+
+#### KatapayadiTextView
+
+```
+
+        <org.silpa.katapayadi.KatapayadiTextView
+                android:id="@+id/tvKatapayadi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല" />
+
+```
+
+Katapayadi number can be obtained by :
+
+```
+    String num = tvKatapayadi.getKatapayadiNumber();
+```
+
 
 #### To run tests
 Tests present at `/src/test/java/`
