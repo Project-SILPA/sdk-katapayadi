@@ -41,3 +41,5 @@ dependencies {
     compile project(':sdk-syllabifier')
     compile project(':sdk-common')
 }
+
+//apply from: '../gradle-mvn-push.gradle'
