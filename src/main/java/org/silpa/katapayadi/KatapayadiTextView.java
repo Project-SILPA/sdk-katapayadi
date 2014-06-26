@@ -2,14 +2,15 @@ package org.silpa.katapayadi;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
+
+import org.silpa.render.IndicTextView;
 
 import java.util.List;
 
 /**
  * Created by sujith on 16/6/14.
  */
-public class KatapayadiTextView extends TextView implements KatapayadiInterface {
+public class KatapayadiTextView extends IndicTextView implements KatapayadiInterface {
 
     /**
      * Katapayadi object

@@ -10,12 +10,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.silpa.render.IndicEditText;
+
 import java.util.List;
 
 /**
  * Created by sujith on 16/6/14.
  */
-public class KatapayadiEditText extends EditText implements KatapayadiInterface {
+public class KatapayadiEditText extends IndicEditText implements KatapayadiInterface {
 
     /**
      * Katapayadi object
