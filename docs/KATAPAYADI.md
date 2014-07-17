@@ -104,46 +104,6 @@ Argument can be number or raga in `String` format.
         String moduleInforamtion =  obj.getModuleInformation();
 ```
 
-#### KatapayadiEditText
-
-```
-
-        <org.silpa.katapayadi.KatapayadiEditText
-                android:id="@+id/edtKatapayadi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                katapayadi:katapayadiOutputTo="@+id/tvKatapayadiOutput" />
-
-```
-
-Here `katapayadi:katapayadiOutputTo="@+id/fieldId" ` would output katapayadi number of the text in edit text automatically to another Edittext or TextView specified by 'fieldId'
-
-Katapayadi number can also be obtained by :
-
-```
-    String num = edtKatapayadi.getKatapayadiNumber();
-```
-
-
-#### KatapayadiTextView
-
-```
-
-        <org.silpa.katapayadi.KatapayadiTextView
-                android:id="@+id/tvKatapayadi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാല" />
-
-```
-
-Katapayadi number can be obtained by :
-
-```
-    String num = tvKatapayadi.getKatapayadiNumber();
-```
-
-
 #### To run tests
 Tests present at `/src/test/java/`
 

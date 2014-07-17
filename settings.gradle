@@ -1,3 +1,2 @@
 include ':sdk-syllabifier'
 include ':sdk-common'
-include ':sdk-render'
