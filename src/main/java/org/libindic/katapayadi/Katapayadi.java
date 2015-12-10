@@ -1,7 +1,7 @@
-package org.silpa.katapayadi;
+package org.libindic.katapayadi;
 
-import org.silpa.sdk.common.LanguageDetect;
-import org.silpa.syllabifier.Syllabifier;
+import org.libindic.common.LanguageDetect;
+import org.libindic.syllabifier.Syllabifier;
 
 import java.util.ArrayList;
 import java.util.Arrays;

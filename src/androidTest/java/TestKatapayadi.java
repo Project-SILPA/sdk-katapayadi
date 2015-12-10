@@ -3,7 +3,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import org.silpa.katapayadi.Katapayadi;
+import org.libindic.katapayadi.Katapayadi;
 
 import java.util.List;
 
